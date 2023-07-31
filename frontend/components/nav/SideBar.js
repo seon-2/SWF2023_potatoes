@@ -9,7 +9,7 @@ export const SideBar = () => {
 
   useEffect(() => {
     const sections = document.querySelectorAll(".section-wrapper");
-
+    console.log(sections);
     const options = {
       threshold: 0.3,
     };
@@ -34,13 +34,22 @@ export const SideBar = () => {
       transition={{ duration: 0.5 }}
       className={styles.sideBar}
     >
-      <span className={styles.logo}>
-        B<span>.</span>
-      </span>
       <motion.a
         initial={{ x: -70 }}
         animate={{ x: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
+        href="#home"
+        onClick={() => {
+          setSelected("home");
+        }}
+        className={selected === "home" ? styles.selected : ""}
+      >
+        Main
+      </motion.a>
+      <motion.a
+        initial={{ x: -70 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
         href="#about"
         onClick={() => {
           setSelected("about");
@@ -52,7 +61,7 @@ export const SideBar = () => {
       <motion.a
         initial={{ x: -70 }}
         animate={{ x: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
         href="#projects"
         onClick={() => setSelected("projects")}
         className={selected === "projects" ? styles.selected : ""}
@@ -62,7 +71,7 @@ export const SideBar = () => {
       <motion.a
         initial={{ x: -70 }}
         animate={{ x: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
         href="#experience"
         onClick={() => setSelected("experience")}
         className={selected === "experience" ? styles.selected : ""}
@@ -72,7 +81,7 @@ export const SideBar = () => {
       <motion.a
         initial={{ x: -70 }}
         animate={{ x: 0 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         href="#contact"
         onClick={() => setSelected("contact")}
         className={selected === "contact" ? styles.selected : ""}

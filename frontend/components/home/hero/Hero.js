@@ -5,7 +5,7 @@ import styles from "./hero.module.scss";
 
 export const Hero = () => {
   return (
-    <section className={`section-wrapper ${styles.hero}`}>
+    <section id="home" className={`section-wrapper ${styles.hero}`}>
       <div className={styles.copyWrapper}>
         <Reveal>
           <h1 className={styles.title}>
@@ -22,10 +22,11 @@ export const Hero = () => {
         </Reveal>
         <Reveal>
           <p className={styles.aboutCopy}>
-            I&apos;ve spent the last 5 years building and scaling software for
-            some pretty cool companies. I also teach people to paint online
-            (incase you&apos;ve got an empty canvas layin&apos; around 🎨).
-            Let&apos;s connect!
+            잊기 쉬운 일상의 소중함을 일깨울 수 있는 공간과, 밭에서 자라는
+            신선한 농산물을 활용하여 부가가치를 더한 상품을 개발해 새로운 소비를
+            창출하고, 제철에 따라 농장에서 신선한 재료들로 디저트와 음료를
+            만들어 제공합니다. 또한, 각기 다른 품종의 다양성의 가치를 담은
+            콘텐츠를 경험할 수 있도록 제안합니다.
           </p>
         </Reveal>
         <Reveal>
