@@ -21,17 +21,22 @@ export const ProjectModal = ({
 
     if (isOpen) {
       body.style.overflowY = "hidden";
+      document.querySelector("header").style.visibility = "hidden";
+      document.querySelector("nav").style.visibility = "hidden";
     } else {
       body.style.overflowY = "scroll";
+      document.querySelector("header").style.visibility = "visible";
+      document.querySelector("nav").style.visibility = "visible";
     }
   }, [isOpen]);
 
-  const content = (
+  if (!isOpen) return <></>;
+
+  return (
     <div className={styles.modal} onClick={() => setIsOpen(false)}>
       <button className={styles.closeModalBtn}>
         <MdClose />
       </button>
-
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -46,9 +51,7 @@ export const ProjectModal = ({
         <div className={styles.modalContent}>
           <h4>{title}</h4>
           <div className={styles.modalTech}>{tech.join(" - ")}</div>
-
           <div className={styles.suppliedContent}>{modalContent}</div>
-
           <div className={styles.modalFooter}>
             <p className={styles.linksText}>
               Project Links<span>.</span>
@@ -66,8 +69,4 @@ export const ProjectModal = ({
       </motion.div>
     </div>
   );
-
-  if (!isOpen) return <></>;
-
-  return ReactDOM.createPortal(content, document.getElementById("root"));
 };

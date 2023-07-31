@@ -1,10 +1,9 @@
 import styles from "./headinglinks.module.scss";
 import {
-  AiFillLinkedin,
   AiFillGithub,
   AiFillTwitterCircle,
-  AiFillCodepenCircle,
 } from "react-icons/ai";
+import { SiOpensea, SiEthereum } from "react-icons/si";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -16,8 +15,12 @@ export const MyLinks = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.0 }}
       >
-        <Link href="https://www.linkedin.com" target="_blank" rel="nofollow">
-          <AiFillLinkedin size="2.4rem" />
+        <Link
+          href="https://opensea.io/collection/mfers"
+          target="_blank"
+          rel="nofollow"
+        >
+          <SiOpensea size="2.4rem" />
         </Link>
       </motion.span>
 
@@ -26,7 +29,11 @@ export const MyLinks = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.1 }}
       >
-        <Link href="https://www.github.com" target="_blank" rel="nofollow">
+        <Link
+          href="https://github.com/seon-2/SWF2023_potatoes"
+          target="_blank"
+          rel="nofollow"
+        >
           <AiFillGithub size="2.4rem" />
         </Link>
       </motion.span>
@@ -46,8 +53,8 @@ export const MyLinks = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
-        <Link href="https://www.codepen.io" target="_blank" rel="nofollow">
-          <AiFillCodepenCircle size="2.4rem" />
+        <Link href="https://polygonscan.com/" target="_blank" rel="nofollow">
+          <SiEthereum size="2.4rem" />
         </Link>
       </motion.span>
     </div>

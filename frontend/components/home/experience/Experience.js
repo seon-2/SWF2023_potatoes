@@ -3,8 +3,8 @@ import { ExperienceItem } from "./ExperienceItem";
 
 export const Experience = () => {
   return (
-    <section className="section-wrapper" id="experience">
-      <SectionHeader title="Experience" dir="l" />
+    <section className="section-wrapper" id="roadmap">
+      <SectionHeader title="Roadmap" dir="l" />
       {experience.map((item) => (
         <ExperienceItem key={item.title} {...item} />
       ))}
@@ -14,48 +14,30 @@ export const Experience = () => {
 
 const experience = [
   {
-    title: "Google",
-    position: "Software Engineer",
-    time: "2022 - Present",
-    location: "Atlanta",
-    description:
-      "I help build and scale Google Photos. Increased throughput of our primary services by 70%. Migrated backend service from Java to Go. Also helped make it look prettier.",
-    tech: [
-      "Angular",
-      "Python",
-      "GCP",
-      "Git",
-      "GitHub",
-      "Java",
-      "Golang",
-      "K8s",
-    ],
-  },
-  {
-    title: "Facebook",
-    position: "Software Engineer",
+    title: "Step 1",
+    position: "감자빵 만들기",
     time: "2020 - 2022",
-    location: "San Francisco",
+    location: "Chuncheon",
     description:
-      "Senior Full Stack Engineer for Facebook Marketplace. Created a service from scratch to handle new listings. Also played some ping pong. It was fun.",
-    tech: ["React", "Node", "PHP", "GraphQL", "Presto", "Cassandra"],
+      "저렴한 외국산 감자를 수입하지 않고, 계약재배를 통해 국내산 감자만 사용합니다.",
+    tech: ["감자빵", "치즈 감자빵", "토마토바질 감자빵", "마늘 감자빵"],
   },
   {
-    title: "Amazon",
-    position: "Software Engineer",
-    time: "2016 - 2020",
-    location: "Seattle",
+    title: "Step 2",
+    position: "감자빵 홍보하기",
+    time: "2022 - 2023",
+    location: "Chuncheon",
     description:
-      "Data Engineer for store front. Built data pipelines with Spark and Airflow. Saw Bezos one time. He said he liked my paintings. I said I liked his hair.",
-    tech: [
-      "Java",
-      "Python",
-      "S3",
-      "RDS",
-      "Redshift",
-      "PySpark",
-      "HDFS",
-      "Apache Airflow",
-    ],
+      "밀가루를 사용하지 않고, 타피오카 전분과 쌀가루를 이용하여 겉피가 더욱 쫀득합니다.",
+    tech: ["참깨 감자빵", "카레 감자빵", "올리브 감자빵", "불닭 감자빵"],
+  },
+  {
+    title: "Step 3",
+    position: "감자빵 판매하기",
+    time: "2023 - Present",
+    location: "Chuncheon",
+    description:
+      "저렴한 감자파우더 대비, 맛과 영양적인 부분에서 감자 본연의 맛을 최대한 구현하기 위해 다품종의 국산 감자를 사용합니다.",
+    tech: ["씨앗 감자빵", "고르곤졸라 감자빵", "초당 옥수수빵"],
   },
 ];
